@@ -1,0 +1,116 @@
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+}
+
+header {
+  grid-area: header;
+  height: 4em;
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  background-color: rgb(37, 82, 123);
+}
+
+.header-titulo {
+  padding: 10px;
+  text-align: center; /* Centra el texto dentro de .header-titulo */
+}
+
+header h1 {
+  margin: 0; /* Elimina márgenes por defecto del h1 */
+  text-align: center; /* Asegura que el h1 esté centrado también */
+  font-size: 1em;
+}
+
+
+
+aside {
+  grid-area: sidebar;
+  background-color: rgb(231, 231, 231);
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+aside h2 {
+  text-align: center;
+  padding: 10px;
+}
+
+aside li {
+  padding: 3px 20px;
+}
+
+.suave {
+  color: rgb(116, 115, 115);
+}
+
+main {
+  grid-area: main;
+  background-color: rgb(231, 231, 231);
+  color: black;
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.producto {
+  border: 1px solid black;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.producto img {
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.producto p {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.comprar {
+  background-color: rgb(37, 82, 123);
+  color: white;
+}
+
+footer {
+  grid-area: footer;
+  height: 6em; /* Puedes ajustar la altura según lo necesites */
+  display: flex;
+  flex-direction: column; /* Apila las <p> una debajo de la otra */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  text-align: center;
+  background-color: rgb(255, 255, 255); /* Fondo negro */
+  color: black; /* Texto blanco */
+}
+
+footer p {
+  margin: 5px 0; /* Añade un margen para separar los párrafos */
+  font-size: 1em; /* Ajusta el tamaño del texto si lo deseas */
+}
